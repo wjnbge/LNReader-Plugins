@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="applicable-device" content="pc,mobile">
+<title>章节列表 - 饲身 - 李小白 - 夜读集</title>
+<meta name="keywords" content="饲身,李小白,校园,NP,夜读集,小说,成人小说">
+<meta name="description" content="《饲身》是由作者 李小白 创作的校园小说作品，主要讲述NP等情节。夜读集收录高质量成人小说与情色文学，提供最新章节、完整内容在线阅读。当前状态：连载中。">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.11.5/css/layui.min.css">
+<link rel="stylesheet" href="/static/ssqqss/common.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="headbar">
+            <div class="left">
+                <a class="btn-menu" href="javascript:void(0)" id="book-menu">小说<i data-feather="chevron-down"></i></a>
+                <a class="btn-menu" href="javascript:void(0)" id="comic-menu">漫画<i data-feather="chevron-down"></i></a>
+            </div>
+            <a class="logo" href="/" title="夜读集">夜读集</a>
+            <div class="btns">
+                <a class="btns-item btn-search" href="javascript:void(0)" id="search-menu" lay-options="{align: 'right'}"><i data-feather="search"></i></a>
+                <a class="btns-item btn-login" href="javascript:void(0)" onclick="login()"><img class="btn-user" src="/static/img/avatar.png"><span>登录</span></a>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="container">
+    <section>
+        <div class="breadcrumb"><span class="layui-breadcrumb"><a href="/">夜读集</a><a href="/book/361634/">饲身</a><a><cite>章节列表</cite></a></span></div>
+    </section>
+    <section id="chapters">
+        <div class="head">
+            <div class="left"><h3>章节列表</h3></div>
+            <a class="right chapters-sort" href="javascript:void(0)"><span><i data-feather="repeat"></i>排序</span></a>
+        </div>
+        <div class="chapter-list">
+            <a data-chapterId="1098855" href="/book/361634/14285115.html"><h4>第1章 初入海大</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098854" href="/book/361634/14285102.html"><h4>第2章 幼时初见 “你看看，老子是谁”</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098853" href="/book/361634/14285089.html"><h4>第3章 卡扣崩开，肥乳不受控跳出</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098852" href="/book/361634/14285076.html"><h4>第4章 磨奶尖 “想我了吗”</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098851" href="/book/361634/14285063.html"><h4>第5章 小狗</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098850" href="/book/361634/14285050.html"><h4>第6章 枕头飞走</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098849" href="/book/361634/14285037.html"><h4>第7章 贺家奶奶过寿</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098848" href="/book/361634/14285024.html"><h4>第8章 被贺祁珩扯奶子 当着他的面高潮了</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098847" href="/book/361634/14285011.html"><h4>第9章 成鸡巴套子</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098846" href="/book/361634/14284998.html"><h4>第10章 排精</h4><small class="text-muted">免费</small></a>
+            <a data-chapterId="1098845" href="/book/361634/14284985.html"><h4>第11章 被威胁</h4><small class="text-muted">VIP</small></a>
+            <a data-chapterId="1098844" href="/book/361634/14284972.html"><h4>第12章 泌乳</h4><small class="text-muted">VIP</small></a>
+            <a data-chapterId="1098843" href="/book/361634/14284959.html"><h4>第13章 玩阴蒂</h4><small class="text-muted">VIP</small></a>
+        </div>
+    </section>
+</main>
+<footer><p>Copyright &copy; 2026 <a href="//www.yeduji.com">夜读集</a></p></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.11.5/layui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.2/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/ssqqss/main.js"></script>
+<!-- 统计代码 --><script src="/static/js/collect.js"></script>
+<script src="/static/js/history.js"></script>
+<script>
+// 检查阅读到第几章，并且加上高亮
+$(function () {
+    const novelId = 27818;
+    const chapterLinks = $('[data-chapterId]');
+    
+    const record = history.list.find(item => item.id == novelId);
+    if (!record || !record.chapterId) return;
+
+    const readedId = parseInt(record.chapterId);
+
+    chapterLinks.each(function () {
+        const $link = $(this);
+        const cid = parseInt($link.data('chapterid'));
+        if (cid === readedId) {
+            $link.addClass('readed');
+        }
+    });
+});
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"3918e9fc9fb140109411e17b55e4822f","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title> - 夜读集</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/layui/2.11.2/css/layui.min.css">
+<link rel="stylesheet" href="/static/free/common.css">
+<style>
+    .search-form {margin: var(--mb);}
+    .search-form .layui-input-wrap {flex: 1;}
+    .novel-item .title em {color: red;}
+    @media (min-width: 640px) {
+        .search-form {margin: 0 0 var(--mb);}
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="headbar">
+            <div class="left">
+                <div class="menu-box">
+                    <a class="btn-menu" href="javascript:void(0)" onclick="history.back()"><i data-feather="chevron-left"></i></a>
+                </div>
+            </div>
+            <a class="logo" href="/" title="夜读集">夜读集</a>
+            <div class="btns">
+                <a class="btns-item btn-login" href="javascript:void(0)" onclick="login()"><img class="btn-user" src="/static/img/avatar.png"><span>登录</span></a>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="container">
+    <form class="layui-form search-form" method="get" action="">
+        <div class="layui-input-wrap">
+            <input type="text" name="q" value="" lay-affix="search" lay-filter="search" lay-options="{split: true}" placeholder="搜索…" class="layui-input">
+        </div>
+    </form>
+
+
+</main>
+<footer><p>Copyright &copy; 2026 <a href="//www.yeduji.com">夜读集</a></p></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/layui/2.11.2/layui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.2/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/free/main.js"></script>
+<!-- 统计代码 --><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"3918e9fc9fb140109411e17b55e4822f","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
